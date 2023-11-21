@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Currency Exchange </title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+</head>
+<body>
+    
+    <!-- As a heading -->
+    <nav class="navbar navbar-dark bg-warning">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"> Currency Exchange </span>
+    </div>
+    </nav>
+
+    <div class="container mt-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">MM</th>
+                    <th scope="col">USD</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <th scope="row">Buy</th>
+                    <td><input type="number" class="form-control" placeholder="MMkyats" id="buyMm" onchange="buy(1)"></td>
+                    <td><input type="number" class="form-control" placeholder="USD dollar" id="buyUsd" onchange="buy(2)"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Sell</th>
+                    <td><input type="number" class="form-control" placeholder="MMkyats" id="sellMm" onchange="sell(1)"></td>
+                    <td><input type="number" class="form-control" placeholder="USD dollar" id="sellUsd" onchange="sell(2)"></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="CE.js"></script>
+    <!-- <script>
+        var bMm = 1523, sMm = 1533, bUsd = 1, sUsd = 1; 
+
+        var buyMm = document.getElementById('buyMm');
+        var buyUsd = document.getElementById('buyUsd');
+        var sellMm = document.getElementById('sellMm');
+        var sellUsd = document.getElementById('sellUsd'); 
+
+        buyUsd.value = bUsd;
+        buyMm.value = bMm;
+        sellMm.value = sMm;
+        sellUsd.value = sUsd;
+
+
+        function buy(i){
+            var currency = 0; 
+            switch (i){
+                case 1: buyUsd.value = parseInt(buyMm.value/bMm); break; 
+                case 2: buyMm.value = parseInt(buyUsd.value*bMm); break; 
+            }
+        }
+        function sell(i){
+            switch (i){
+                case 1:sellUsd.value = parseInt(sellMm.value/sMm); break; 
+                case 2:sellMm.value = parseInt(sellUsd.value*sMm); break; 
+            }
+        }
+    </script> -->
+
+</body>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</html>
